@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: klc-backend
+    env: docker
+    repo: https://github.com/slavakoshil/klc-logistics
+    branch: main
+    dockerfilePath: ./backend/Dockerfile
+
+  - type: web
+    name: klc-frontend
+    env: docker
+    repo: https://github.com/slavakoshil/klc-logistics
+    branch: main
+    dockerfilePath: ./frontend/Dockerfile
+
+databases:
+  - name: klc-db
+    databaseName: klc
+    user: klc_user
